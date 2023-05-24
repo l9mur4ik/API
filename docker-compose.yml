@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  newscityapi:
+    container_name: newscityapi
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: always
+    network_mode: host
+    depends_on:
+      - newscityapi_db
+    links:
+      - newscityapi_db
+  newscityapi_db:
+    container_name: newscityapi_db
+    image: postgres:12.1
+    environment:
+      POSTGRES_USER: "news_user"
+      POSTGRES_PASSWORD: "ruof02231310"
+      POSTGRES_DB: "news"
+    ports:
+      - 5432:5432
+    volumes:
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql
+      - pgdata:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  pgdata:
+

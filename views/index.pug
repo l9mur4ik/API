@@ -1,0 +1,98 @@
+doctype html
+head
+    style
+        include index.css
+.App
+    .title
+        span= weather_date
+        = weather_day_of_week
+    hr
+    .columns
+        .item_column
+            .time
+                | Ночью
+            .type_image_weather
+                img(src="" +weather_night_img alt='none')
+            .temperature
+                span= weather_night_temp
+                | &deg;
+            .type_text_weather
+                span= weather_night_state
+            .pressure
+                img(src='/images/барометр.png' alt='')
+                span= weather_night_pressure
+                |  мм
+            .humidity
+                img(src='/images/влажность.png' alt='')
+                span= weather_night_humidity
+                | %
+            .wind_speed
+                img(src='/images/ветер.png' alt='')
+                span= weather_night_wind
+                |  м/c
+        .item_column
+            .time
+                | Утром
+            .type_image_weather
+                img(src="" +weather_morning_img alt='none')
+            .temperature
+                span= weather_morning_temp
+                | &deg;
+            .type_text_weather
+                span= weather_morning_state
+            .pressure
+                img(src='/images/барометр.png' alt='')
+                span= weather_morning_pressure
+                |  мм
+            .humidity
+                img(src='/images/влажность.png' alt='')
+                span= weather_morning_humidity
+                | %
+            .wind_speed
+                img(src='/images/ветер.png' alt='')
+                span= weather_morning_wind
+                |  м/c
+        .item_column
+            .time
+                | Днём
+            .type_image_weather
+                img(src="" +weather_afternoon_img alt='none')
+            .temperature
+                span= weather_afternoon_temp
+                | &deg;
+            .type_text_weather
+                span= weather_afternoon_state
+            .pressure
+                img(src='/images/барометр.png' alt='')
+                span= weather_afternoon_pressure
+                |  мм
+            .humidity
+                img(src='/images/влажность.png' alt='')
+                span= weather_afternoon_humidity
+                | %
+            .wind_speed
+                img(src='/images/ветер.png' alt='')
+                span= weather_afternoon_wind
+                |  м/c
+        .item_column
+            .time
+                | Вечером
+            .type_image_weather
+                img(src="" +weather_evening_img alt='none')
+            .temperature
+                span= weather_evening_temp
+                | &deg;
+            .type_text_weather
+                span= weather_evening_state
+            .pressure
+                img(src='/images/барометр.png' alt='')
+                span= weather_evening_pressure
+                |  мм
+            .humidity
+                img(src='/images/влажность.png' alt='')
+                span= weather_evening_humidity
+                | %
+            .wind_speed
+                img(src='/images/ветер.png' alt='')
+                span= weather_evening_wind
+                |  м/c
